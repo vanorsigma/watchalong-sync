@@ -1,0 +1,21 @@
+{
+  "name": "watchalong-sync",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "esbuild src/*.ts --bundle --outdir=dist/ && cp src/*.html dist/ && cp src/*.css dist/",
+    "watch": "chokidar 'src/*' -c 'npm run build'"
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.5",
+    "chokidar-cli": "^3.0.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@twurple/api": "^7.3.0",
+    "@twurple/auth": "^7.3.0",
+    "@twurple/chat": "^7.3.0",
+    "jsqr": "^1.4.0",
+    "qrcode": "^1.5.4"
+  }
+}

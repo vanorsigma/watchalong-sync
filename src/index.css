@@ -1,0 +1,106 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #18181b;
+  color: #fff;
+  text-align: center;
+}
+
+#watchalong-video {
+  width: 100%;
+  max-width: 80vw;
+  border: 2px solid #4ade80;
+}
+
+#output {
+  background: #232326;
+  color: #4ade80;
+  padding: 1em;
+  margin: 1em auto;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+button {
+  background: #4ade80;
+  color: #18181b;
+  border: none;
+  padding: 1em 2em;
+  margin: 0.1rem;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.container-body {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.container-body .viewer-body-1 {
+  width: 30vw;
+}
+
+.container-body .viewer-body-2 {
+  flex-grow: 1;
+}
+
+.container-body .streamer-body-2 {
+  flex-grow: 1;
+}
+
+button:active {
+  background: #059669;
+}
+
+input[type="text"],
+textarea {
+  background: #232326; /* Dark background to match #output */
+  color: #fff;
+  border: 1px solid #4ade80;
+  padding: 0.8em 1em;
+  margin: 0.5em 0;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #a7f3d0;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.5);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input-section {
+  margin: 2em auto;
+  padding: 1.5em;
+  background: #232326;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.input-section label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5em;
+  color: #a7f3d0;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.input-section div {
+  padding: 0.2rem;
+}

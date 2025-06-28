@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Watchalong Tool | Viewer Mode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>Viewer Mode</h1>
+    <div class="container-body">
+      <div class="viewer-body-1">
+        <div class="input-section">
+          <div>
+            <label for="baseUrl">Base URL of video folder to sync:</label>
+            <input id="baseUrl" name="baseUrl" type="text" />
+            <label for="baseUrl">Channel Name:</label>
+            <input id="channelName" name="channelName" type="text" />
+          </div>
+
+          <div>
+            <button id="updateFile">Update</button>
+          </div>
+
+          <p>Twitch Chat status: <span id="twitchStatus">Press Update</span></p>
+        </div>
+        <div class="input-section">
+          <h2>Sync Methods</h2>
+          <button id="windowsync">Window Capture</button>
+          <button id="camerasync">Camera Capture</button>
+          <p id="syncStatus"></p>
+          <p style="margin: 0 auto">
+            Use the above buttons to sync with the stream. If you do not
+            do this step, an impossible latency of 0 milliseconds will be
+            assumed, which may harm your watchalong experience. If you are
+            on PC, use "Window Capture" to capture the Twitch stream for
+ synchronization purposes. If you are on Mobile, use "Camera
+            Capture" to scan the QR code currently on stream.
+          </p>
+        </div>
+      </div>
+
+      <div class="viewer-body-2">
+        <video id="watchalong-video" controls crossorigin="anonymous">
+          <track id="watchalong-track" kind="subtitles" srclang="en">
+          <source src="" type="">
+          Your browser does not support the video tag.
+        </video>
+        <br>
+      </div>
+    </div>
+
+    <canvas id="captureOutput" hidden="true"></canvas>
+    <script src="viewer.js"></script>
+  </body>
+</html>

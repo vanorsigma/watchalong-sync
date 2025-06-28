@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Watchalong Tool | Streamer Mode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>Streamer Mode</h1>
+    <div class="container-body">
+      <div>
+        <div class="input-section">
+          <div>
+            <label for="baseUrl">Base URL of video folder to sync:</label>
+            <input id="baseUrl" name="baseUrl" type="text" />
+          </div>
+
+          <div>
+            <label for="filePath">Filename of video:</label>
+            <input id="filePath" name="filePath" type="text" />
+          </div>
+
+          <div>
+            <button id="updateFile">Update</button>
+          </div>
+
+          <div>
+            <img id="qrcodeOutput"/>
+            <p>Share this QR code on stream</p>
+          </div>
+        </div>
+
+        <div class="input-section">
+          <button id="loginTwitch">Login to Twitch</button>
+          <p>Logged in status: <span id="loginStatus">Loading...</span></p>
+        </div>
+      </div>
+
+      <div class="streamer-body-2">
+        <video id="watchalong-video" controls crossorigin="anonymous">
+          <track id="watchalong-track" kind="subtitles" srclang="en">
+          <source src="" type=""/>
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <script src="streamer.js"></script>
+  </body>
+</html>
